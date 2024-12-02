@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team Counter</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="team-name-modal" class="modal">
+    <div class="modal-content">
+      <h2>Enter Team Names</h2>
+      <form id="team-name-form">
+        <label>Team 1 Name: <input type="text" id="team1-input" placeholder="Team 1"></label>
+        <label>Team 2 Name: <input type="text" id="team2-input" placeholder="Team 2"></label>
+        <label>Team 3 Name: <input type="text" id="team3-input" placeholder="Team 3"></label>
+        <label>Team 4 Name: <input type="text" id="team4-input" placeholder="Team 4"></label>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+  
+
+  <div class="main-container">
+    <!-- Top Team -->
+    <div class="team top-team">
+      <h3 id="team1-name">Team 1</h3>
+      <button id="team1-win">+ Win</button>
+      <span id="team1-wins">0</span>
+      <button id="team1-lose">+ Loss</button>
+      <span id="team1-losses">0</span>
+    </div>
+
+    <!-- Left Team -->
+    <div class="team left-team">
+      <h3 id="team2-name">Team 2</h3>
+      <button id="team2-win">+ Win</button>
+      <span id="team2-wins">0</span>
+      <button id="team2-lose">+ Loss</button>
+      <span id="team2-losses">0</span>
+    </div>
+
+    <!-- Current Center Content -->
+    <div class="center-container">
+      <!-- Squares Section -->
+      <div class="squares-container">
+        <div class="square" data-index="1">1</div>
+        <div class="square" data-index="2">2</div>
+        <div class="square" data-index="3">3</div>
+        <div class="square" data-index="4">4</div>
+        <div class="square" data-index="5">5</div>
+        <div class="square" data-index="6">6</div>
+        <div class="square" data-index="7">7</div>
+      </div>
+      <button id="reset-squares-button" class="reset-squares">Reset Squares</button>
+
+      <!-- Center Buttons Section -->
+      <div class="container">
+        <button id="decrease-red-button">-</button>
+        <span id="red-count">0</span>
+        <button id="red-button">+</button>
+        <button id="reset-button">Reset</button>
+        <button id="decrease-blue-button">-</button>
+        <span id="blue-count">0</span>
+        <button id="blue-button">+</button>
+      </div>
+      <button id="reset-teams-button" class="reset-teams">Reset All Teams Points</button>
+    </div>
+
+    <!-- Right Team -->
+    <div class="team right-team">
+      <h3 id="team3-name">Team 3</h3>
+      <button id="team3-win">+ Win</button>
+      <span id="team3-wins">0</span>
+      <button id="team3-lose">+ Loss</button>
+      <span id="team3-losses">0</span>
+    </div>
+
+    <!-- Bottom Team -->
+    <div class="team bottom-team">
+      <h3 id="team4-name">Team 4</h3>
+      <button id="team4-win">+ Win</button>
+      <span id="team4-wins">0</span>
+      <button id="team4-lose">+ Loss</button>
+      <span id="team4-losses">0</span>
+    </div>
+
+    <!-- Winner Button -->
+<button id="calculate-winner" class="calculate-winner">Calculate Winner 🎖️</button>
+
+<!-- Winner Modal -->
+<div id="winner-modal" class="modal">
+  <div class="modal-content winner-content">
+    <h2>🎉🏆 Winner 🏆🎉</h2>
+    <h1 id="winner-name" class="dancing-text">Team 1</h1>
+  </div>
+</div>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

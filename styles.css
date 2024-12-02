@@ -1,0 +1,393 @@
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+  color: white;
+}
+
+/* Main Container */
+.main-container {
+  display: grid;
+  grid-template-areas:
+    "left-team top-team right-team"
+    "left-team center-container right-team"
+    "left-team bottom-team right-team";
+  grid-template-rows: 1fr 2fr 1fr;
+  grid-template-columns: 1fr 2fr 1fr;
+  width: 100%;
+  height: 100%;
+}
+
+/* Center Content */
+.center-container {
+  grid-area: center-container;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Squares Section */
+.squares-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.square {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background-color: grey;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.square.red {
+  background-color: red;
+}
+
+.square.blue {
+  background-color: blue;
+}
+
+.square.yellow {
+  background-color: yellow;
+  color: black;
+}
+
+/* Reset Squares Button */
+.reset-squares {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Team Styling */
+.team {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.team h3 {
+  margin: 0;
+}
+
+.team button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.team span {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#team1-win, #team2-win, #team3-win, #team4-win {
+  background-color: green;
+  color: white;
+}
+
+#team1-lose, #team2-lose, #team3-lose, #team4-lose {
+  background-color: red;
+  color: white;
+}
+
+/* Team Positions */
+.top-team {
+  grid-area: top-team;
+}
+
+.left-team {
+  grid-area: left-team;
+}
+
+.right-team {
+  grid-area: right-team;
+}
+
+.bottom-team {
+  grid-area: bottom-team;
+}
+
+/* Existing Buttons Section */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+button {
+  padding: 15px 20px;
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+}
+
+#red-button, #decrease-red-button {
+  background-color: red;
+  color: white;
+}
+
+#blue-button, #decrease-blue-button {
+  background-color: blue;
+  color: white;
+}
+
+#reset-button {
+  background-color: green;
+  color: white;
+}
+
+span {
+  font-size: 28px;
+  font-weight: bold;
+}
+/* Reset All Teams Button */
+.reset-teams {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: purple; /* Changed to purple */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.reset-teams:hover {
+  transform: scale(1.1);
+  background-color: darkpurple; /* Darker purple on hover */
+}
+
+.reset-teams:active {
+  transform: scale(0.95);
+}
+/* General Button Styling */
+button {
+  padding: 15px 20px;
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+button:active {
+  transform: scale(0.95); /* Slightly shrink on click */
+}
+
+/* Team Buttons */
+#team1-win, #team2-win, #team3-win, #team4-win {
+  background-color: green;
+  color: white;
+}
+
+#team1-win:hover, #team2-win:hover, #team3-win:hover, #team4-win:hover {
+  background-color: darkgreen; /* Darker green on hover */
+}
+
+#team1-lose, #team2-lose, #team3-lose, #team4-lose {
+  background-color: red;
+  color: white;
+}
+
+#team1-lose:hover, #team2-lose:hover, #team3-lose:hover, #team4-lose:hover {
+  background-color: darkred; /* Darker red on hover */
+}
+
+/* Reset All Teams Button */
+.reset-teams {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: purple; /* Default purple */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.reset-teams:hover {
+  transform: scale(1.1);
+  background-color: darkpurple; /* Darker purple on hover */
+}
+
+.reset-teams:active {
+  transform: scale(0.95);
+}
+
+/* Reset Squares Button */
+.reset-squares {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.reset-squares:hover {
+  transform: scale(1.1);
+  background-color: darkgreen; /* Darker green on hover */
+}
+
+/* Center Buttons */
+#red-button, #decrease-red-button {
+  background-color: red;
+  color: white;
+}
+
+#red-button:hover, #decrease-red-button:hover {
+  background-color: darkred; /* Darker red on hover */
+}
+
+#blue-button, #decrease-blue-button {
+  background-color: blue;
+  color: white;
+}
+
+#blue-button:hover, #decrease-blue-button:hover {
+  background-color: darkblue; /* Darker blue on hover */
+}
+
+#reset-button {
+  background-color: green;
+  color: white;
+}
+
+#reset-button:hover {
+  background-color: darkgreen; /* Darker green on hover */
+}
+/* Modal Styling */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+  display: none; /* Hidden by default */
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  color: black;
+  width: 300px;
+}
+
+.modal-content h2 {
+  margin-bottom: 20px;
+}
+
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.modal-content input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.modal-content button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background: green;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.modal-content button:hover {
+  background: darkgreen;
+}
+/* Calculate Winner Button */
+.calculate-winner {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: orange;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 100;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.calculate-winner:hover {
+  transform: scale(1.1);
+  background-color: darkorange;
+}
+
+.calculate-winner:active {
+  transform: scale(0.95);
+}
+
+/* Winner Modal */
+.winner-content {
+  text-align: center;
+}
+
+.winner-content h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: gold;
+  animation: dance 1s infinite alternate;
+}
+
+/* Dance Animation */
+@keyframes dance {
+  0% {
+    transform: rotate(-10deg) scale(1);
+  }
+  50% {
+    transform: rotate(10deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(-10deg) scale(1);
+  }
+}
